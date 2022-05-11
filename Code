@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <cs50.h>
+
+int main(void)
+{
+
+
+    //About
+    printf("~Test Score Average v2~\n\nThis Program is used to \naverage your test scores\n\n-Made by hman-08\n\n");
+
+    //Asks Number of test Scores
+    int n = get_int("Number of Test scores: ");
+
+    //Scores Array
+    int scores[n];
+
+    //Total variable
+    double total = 0;
+
+    //For Loop
+    for (int i = 0; i < n; i++)
+    {
+        scores[i] = get_int("Score: ");
+        total = total + scores[i];
+    }
+
+    //Calculate the average
+    printf("Average: %f\n", (total / n));
+
+}
